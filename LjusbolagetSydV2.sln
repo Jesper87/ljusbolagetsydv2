@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2ACD7101-474E-4EF5-A092-DF7B2F777D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjusbolagetSyd.Web", "src\LjusbolagetSyd.Web\LjusbolagetSyd.Web.csproj", "{2DDE058B-05DC-443F-9492-5061DE1455C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{73C1E56C-47FA-4CAB-A9D3-7E26D711C7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjustbolagetSyd.Tests", "tests\LjustbolagetSyd.Tests\LjustbolagetSyd.Tests.csproj", "{CAEE703E-2134-4C34-800A-401037AB31BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5441F97A-AAE2-45E3-A7BD-C3AA646B07A6}"
+	ProjectSection(SolutionItems) = preProject
+		appSettings.config = appSettings.config
+		gulp-config.js = gulp-config.js
+		gulpfile.js = gulpfile.js
+		package.json = package.json
+		publishsettings.targets = publishsettings.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjusbolagetSyd.API", "src\LjusbolagetSyd.API\LjusbolagetSyd.API.csproj", "{F64B8519-0FB8-4952-9CB4-164C86D433BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjusbolagetSyd.Core", "src\LjusbolagetSyd.Core\LjusbolagetSyd.Core.csproj", "{6EB31E34-18CB-455D-8157-8422501F2177}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{D0614537-E375-4C44-BEE2-BD30731056E5}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\ljusbolagetsyd.js = scripts\ljusbolagetsyd.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DDE058B-05DC-443F-9492-5061DE1455C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDE058B-05DC-443F-9492-5061DE1455C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDE058B-05DC-443F-9492-5061DE1455C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDE058B-05DC-443F-9492-5061DE1455C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAEE703E-2134-4C34-800A-401037AB31BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEE703E-2134-4C34-800A-401037AB31BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEE703E-2134-4C34-800A-401037AB31BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEE703E-2134-4C34-800A-401037AB31BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F64B8519-0FB8-4952-9CB4-164C86D433BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64B8519-0FB8-4952-9CB4-164C86D433BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64B8519-0FB8-4952-9CB4-164C86D433BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64B8519-0FB8-4952-9CB4-164C86D433BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB31E34-18CB-455D-8157-8422501F2177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB31E34-18CB-455D-8157-8422501F2177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB31E34-18CB-455D-8157-8422501F2177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB31E34-18CB-455D-8157-8422501F2177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DDE058B-05DC-443F-9492-5061DE1455C0} = {2ACD7101-474E-4EF5-A092-DF7B2F777D4B}
+		{CAEE703E-2134-4C34-800A-401037AB31BC} = {73C1E56C-47FA-4CAB-A9D3-7E26D711C7B3}
+		{F64B8519-0FB8-4952-9CB4-164C86D433BD} = {2ACD7101-474E-4EF5-A092-DF7B2F777D4B}
+		{6EB31E34-18CB-455D-8157-8422501F2177} = {2ACD7101-474E-4EF5-A092-DF7B2F777D4B}
+	EndGlobalSection
+EndGlobal
