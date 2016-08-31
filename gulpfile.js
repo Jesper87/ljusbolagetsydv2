@@ -13,6 +13,7 @@ var config = require("./gulp-config.js")();
 var nugetRestore = require('gulp-nuget-restore');
 var fs = require('fs');
 var habitat = require("./scripts/ljusbolagetsyd.js");
+var less = require('gulp-less');
 
 module.exports.config = config;
 
@@ -171,6 +172,9 @@ gulp.task("Publish-All-Views", function () {
     })
   );
 });
+
+// Less configuration
+//TODO
 
 //gulp.task("Publish-All-Configs", function () {
 //  var root = "./src";
