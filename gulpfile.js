@@ -12,7 +12,6 @@ var path = require("path");
 var config = require("./gulp-config.js")();
 var nugetRestore = require('gulp-nuget-restore');
 var fs = require('fs');
-//var unicorn = require("./scripts/unicorn.js");
 var habitat = require("./scripts/ljusbolagetsyd.js");
 
 module.exports.config = config;
@@ -20,46 +19,28 @@ module.exports.config = config;
 gulp.task("default", function (callback) {
   config.runCleanBuilds = true;
   return runSequence(
-  //  "01-Copy-Sitecore-Lib",
-    "02-Nuget-Restore",
-    "03-Publish-All-Projects",
-//    "04-Apply-Xml-Transform",
-//    "05-Sync-Unicorn",
-//    "06-Deploy-Transforms",
+    "01-Nuget-Restore",
+    "02-Publish-All-Projects",
 	callback);
 });
 
 /*****************************
   Initial setup
 *****************************/
-//gulp.task("01-Copy-Sitecore-Lib", function () {
-//  console.log("Copying Sitecore Libraries and License file");
 
-//  fs.statSync(config.sitecoreLibraries);
-
-//  var files = config.sitecoreLibraries + "/**/*";
-
-//  var libs = gulp.src(files).pipe(gulp.dest("./lib/Sitecore"));
-//  var license = gulp.src(config.licensePath).pipe(gulp.dest("./lib"));
-
-//  return merge(libs, license);
-//});
-
-gulp.task("02-Nuget-Restore", function (callback) {
+gulp.task("01-Nuget-Restore", function (callback) {
   var solution = "./" + config.solutionName + ".sln";
   return gulp.src(solution).pipe(nugetRestore());
 });
 
 
-gulp.task("03-Publish-All-Projects", function (callback) {
+gulp.task("02-Publish-All-Projects", function (callback) {
 	return runSequence(
 		"Build-Solution",
-		"Publish-Foundation-Projects", callback);
-	// "Publish-Feature-Projects",
-	//"Publish-Project-Projects", callback);
+		"Publish-Site", callback);
 });
 
-//gulp.task("04-Apply-Xml-Transform", function () {
+//gulp.task("03-Apply-Xml-Transform", function () {
 //  var layerPathFilters = ["./src/Foundation/**/*.transform", "./src/Feature/**/*.transform", "./src/Project/**/*.transform", "!./src/**/obj/**/*.transform", "!./src/**/bin/**/*.transform"];
 //  return gulp.src(layerPathFilters)
 //    .pipe(foreach(function (stream, file) {
@@ -84,16 +65,7 @@ gulp.task("03-Publish-All-Projects", function (callback) {
 //    }));
 //});
 
-//gulp.task("05-Sync-Unicorn", function (callback) {
-//  var options = {};
-//  options.siteHostName = habitat.getSiteUrl();
-//  options.authenticationConfigFile = config.websiteRoot + "/App_config/Include/Unicorn/Unicorn.UI.config";
-
-//  unicorn(function() { return callback() }, options);
-//});
-
-
-//gulp.task("06-Deploy-Transforms", function () {
+//gulp.task("04-Deploy-Transforms", function () {
 //  return gulp.src("./src/**/code/**/*.transform")
 //      .pipe(gulp.dest(config.websiteRoot + "/temp/transforms"));
 //});
@@ -168,17 +140,9 @@ gulp.task("Build-Solution", function () {
         }));
 });
 
-gulp.task("Publish-Foundation-Projects", function () {
+gulp.task("Publish-Site", function () {
   return publishProjects("./src");
 });
-
-//gulp.task("Publish-Feature-Projects", function () {
-//  return publishProjects("./src/Feature");
-//});
-
-//gulp.task("Publish-Project-Projects", function () {
-//  return publishProjects("./src/Project");
-//});
 
 gulp.task("Publish-Assemblies", function () {
   var root = "./src";
