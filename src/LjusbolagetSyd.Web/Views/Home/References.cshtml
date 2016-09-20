@@ -1,0 +1,27 @@
+﻿@model IEnumerable<LjusbolagetSyd.Core.Models.GalleryImageDto>
+
+
+<div class="container">
+	<div class="row">
+		<div class="headlines col-lg-12">
+			<h2>Referenser</h2>
+		</div>
+		@if (Model != null)
+		{
+			for (int i = 0; i < Model.Count();)
+			{
+				<div class="row">
+					@foreach (var image in Model.Skip(i).Take(3))
+					{
+						<div class="col-md-4 thumb limit"> 
+							<a class="border-thumbnail" href="@image.ImageUrl">
+								<img class="img-responsive" src="@image.ImageUrl" alt="">
+							</a>
+						</div>
+						i++;
+					}
+				</div>
+			}
+		}
+	</div>
+</div>

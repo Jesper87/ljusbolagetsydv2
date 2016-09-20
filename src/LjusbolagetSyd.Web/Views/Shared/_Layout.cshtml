@@ -1,26 +1,96 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width" />
-	<title>LjusbolagetSyd AB</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Ljusbolaget Syd AB - Ljud, Ljus, Scen</title>
+	<link href="~/Styles/bootstrap.min.css" rel="stylesheet">
+	<link href="~/Styles/half-slider.css" rel="stylesheet">
+	<link href="~/Styles/font-awesome.min.css" rel="stylesheet" />
+	<link href="~/Styles/base.css" rel="stylesheet" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
-<nav>
-	<ul>
-		<li>
-			<a href="#">Test1</a>
-		</li>
-		<li>
-			<a href="#">Test2</a>
-		</li>
-		<li>
-			<a href="#">Test3</a>
-		</li>
-	</ul>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container" style="max-width: 500px">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="@Url.Action("Index","Home")">Ljusbolaget Syd</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Referenser</b><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="@Url.Action("References", "Home")"><b>- Alla</b></a></li>
+						<li><a href="#">- Kategori 1</a></li>
+						<li><a href="#">- Kategori 2</a></li>
+						<li><a href="#">- Kategori 3</a></li>
+					</ul>
+				</li>
+				<li>
+				</li>
+				<li>
+					<a href="@Url.Action("Contact", "Home")"><b>Kontakt</b></a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
 </nav>
-<div>
 	@RenderBody()
+<footer>
+	<div class="container">
+		<p><b>Våra leverantörer</b></p>
+		<aside class="clients">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<a href="http://www.audiofocus.eu/">
+						<img src="/Content/Logo/audiofocus.png" class="img-responsive img-centered" alt="">
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<a href="http://www.avolites.com/">
+						<img src="/Content/Logo/avolite.png" class="img-responsive img-centered" alt="">
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<a href="https://www.magicfx.eu/">
+						<img src="/Content/Logo/magicfx.svg" class="img-responsive img-centered" alt="">
+					</a>
+				</div>
+			</div>
+		</aside>
+	</div>
+</footer>
+<div class="footer-bottom">
+	<div class="container">
+		<span class="pull-left">&copy; Ljusbolaget Syd AB</span>
+		<span class="pull-right"><a href="@Url.Action("Contact", "Home")" class="contact-us-link_small">Kontakta oss</a></span>
+	</div>
 </div>
+<!-- jQuery -->
+<script src="~/Scripts/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="~/Scripts/bootstrap.min.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+	$('.carousel').carousel({
+		interval: 5000 //changes the speed
+	})
+</script>
 </body>
 </html>

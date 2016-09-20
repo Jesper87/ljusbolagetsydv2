@@ -48,6 +48,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,6 +76,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -89,11 +105,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Gallery\bild11.jpg" />
+    <Content Include="Content\Images\Gallery\bild12.jpg" />
+    <Content Include="Content\Images\Gallery\bild13.jpg" />
+    <Content Include="Content\Images\Gallery\bild14.jpg" />
+    <Content Include="Content\Images\Gallery\bild15.jpg" />
+    <Content Include="Content\Images\Gallery\bild2.jpg" />
+    <Content Include="Content\Images\Gallery\bild3.jpg" />
+    <Content Include="Content\Images\Gallery\bild4.jpg" />
+    <Content Include="Content\Images\Gallery\bild5.jpg" />
+    <Content Include="Content\Images\Gallery\bild6.jpg" />
+    <Content Include="Content\Images\Gallery\bild7.jpg" />
+    <Content Include="Content\Images\Gallery\bild8.jpg" />
+    <Content Include="Content\Images\Gallery\Bmx1.jpg" />
+    <Content Include="Content\Images\Gallery\Bmx2.jpg" />
+    <Content Include="Content\Images\Gallery\Bmx3.jpg" />
+    <Content Include="Content\Images\Gallery\countryfestivalen.jpg" />
+    <Content Include="Content\Images\Gallery\mans1.jpg" />
+    <Content Include="Content\Images\Gallery\mans2.jpg" />
+    <Content Include="Content\Images\Gallery\musicexpo.jpg" />
+    <Content Include="Content\Images\Gallery\trelleborgsgalan.jpg" />
+    <Content Include="Content\Images\Gallery\utomhus.jpg" />
+    <Content Include="Content\Images\scen1.jpg" />
+    <Content Include="Content\Images\scen2.jpg" />
+    <Content Include="Content\Images\scen3.jpg" />
+    <Content Include="Content\Images\scen4.jpg" />
+    <Content Include="Content\Images\scen5.jpg" />
+    <Content Include="Content\Images\scen6.jpg" />
+    <Content Include="Content\Images\scen7.jpg" />
+    <Content Include="Content\Logo\audiofocus.png" />
+    <Content Include="Content\Logo\avolite.png" />
+    <Content Include="Content\Logo\logo.jpg" />
+    <Content Include="Content\Logo\logo2.jpg" />
+    <Content Include="Content\Logo\magicfx.svg" />
+    <Content Include="Fonts\fontawesome-webfont.svg" />
+    <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\base.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\half-slider.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -107,7 +166,21 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Styles\base.less" />
+    <Content Include="Styles\base.css" />
+    <Content Include="Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Navigation\_Navigation.cshtml" />
+    <Content Include="Views\Home\References.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Fonts\fontawesome-webfont.woff" />
+    <Content Include="Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Fonts\FontAwesome.otf" />
+    <Content Include="App_Config\Ljusbolaget.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -117,8 +190,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LjusbolagetSyd.Core\LjusbolagetSyd.Core.csproj">
+      <Project>{6EB31E34-18CB-455D-8157-8422501F2177}</Project>
+      <Name>LjusbolagetSyd.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
