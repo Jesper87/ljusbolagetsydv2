@@ -1,11 +1,46 @@
 ﻿@model IEnumerable<LjusbolagetSyd.Core.Models.GalleryImageDto>
 
+<header id="myCarousel2" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item active">
+			<div class="fill" style="background-image: url('/Content/Logo/logo2.jpg');"></div>
+			<div class="carousel-caption">
+			</div>
+		</div>
+	</div>
+</header>
 
 <div class="container">
-	<div class="row">
-		<div class="headlines col-lg-12">
-			<h2>Referenser</h2>
-		</div>
+	<hr class="featurette-divider"/>
+	<ul class="references-list">
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Trelleborgsgalan
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Countryfestivalen 2016
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Trelleborg Pride 2016
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>ROCK IT Festival Ängelholm
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>BMX Worldcup Ängelholm
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Oktoberfest Tour 2016
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Ängelholm outdoor 2016
+		</li>
+		<li>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>Lommafesten 2016
+		</li>
+	</ul>
+
+	<h2 class="text-center">Referenser</h2>
+	<hr class="primary">
 		@if (Model != null)
 		{
 			for (int i = 0; i < Model.Count();)
@@ -13,7 +48,7 @@
 				<div class="row">
 					@foreach (var image in Model.Skip(i).Take(3))
 					{
-						<div class="col-md-4 thumb limit"> 
+						<div class="col-md-4 thumb limit">
 							<a class="border-thumbnail" href="@image.ImageUrl">
 								<img class="img-responsive" src="@image.ImageUrl" alt="">
 							</a>
@@ -21,7 +56,7 @@
 						i++;
 					}
 				</div>
+				<hr class="primary">
 			}
 		}
-	</div>
 </div>
