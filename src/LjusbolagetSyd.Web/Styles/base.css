@@ -273,23 +273,39 @@ section {
 	overflow: hidden;
 }
 
-.border-thumbnail {
-	/*border: 2px solid white;*/
-}
-
 .references-list {
 	list-style: none;
 }
 
-	.references-list li {
-		display: inline-block;
-		color: lightgreen:;
-	}
-
-	address span {
-		padding-left: 5px;
-	}
 	.references-list > li span {
 		padding-right: 5px;
 		padding-left: 5px;
 	}
+
+	.references-list > li {
+		display: inline-block;
+		color: lightgreen:;
+	}
+
+		.references-list > li > i {
+			color: lightgreen;
+		}
+
+.carousel {
+	height: 60%;
+}
+address span {
+	padding-left: 5px;
+}
+
+#exTab1 .tab-content {
+  color : white;
+  /*background-color: #428bca;*/
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}

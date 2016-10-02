@@ -3,15 +3,16 @@
 <header id="myCarousel2" class="carousel slide">
 	<div class="carousel-inner">
 		<div class="item active">
-			<div class="fill" style="background-image: url('/Content/Logo/logo2.jpg');"></div>
+			<div class="fill" style="background-image: url('/Content/Images/Gallery/scen5.jpg');"></div>
 			<div class="carousel-caption">
 			</div>
 		</div>
 	</div>
 </header>
 
+
 <div class="container">
-	<hr class="featurette-divider"/>
+	<hr class="featurette-divider" />
 	<ul class="references-list">
 		<li>
 			<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Trelleborgsgalan</span>
@@ -35,28 +36,30 @@
 			<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Ängelholm outdoor 2016</span>
 		</li>
 		<li>
-			<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Lommafesten 2016</span>
+			<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Lommafesten 2016 med flera...</span>
 		</li>
 	</ul>
-
-	<h2 class="text-center">Referenser</h2>
 	<hr class="primary">
-		@if (Model != null)
+
+
+
+
+	@if (Model != null)
+	{
+		for (int i = 0; i < Model.Count();)
 		{
-			for (int i = 0; i < Model.Count();)
-			{
-				<div class="row">
-					@foreach (var image in Model.Skip(i).Take(3))
+			<div class="row">
+				@foreach (var image in Model.Skip(i).Take(3))
 					{
-						<div class="col-md-4 thumb limit">
-							<a class="border-thumbnail" href="@image.ImageUrl">
-								<img class="img-responsive" src="@image.ImageUrl" alt="">
-							</a>
-						</div>
+					<div class="col-md-4 thumb limit">
+						<a class="border-thumbnail" href="@image.ImageUrl" data-lightbox="@image.ImageUrl">
+							<img class="img-responsive" src="@image.ImageUrl" alt="">
+						</a>
+					</div>
 						i++;
 					}
-				</div>
-				<hr class="primary">
-			}
+			</div>
+			<hr class="primary">
 		}
+	}
 </div>

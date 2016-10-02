@@ -2,22 +2,25 @@
 using System.IO;
 using System.Linq;
 using LjusbolagetSyd.Core.Models;
+using LjusbolagetSyd.Core.Repositories.Interfaces;
 using LjusbolagetSyd.Core.Services.Interfaces;
 
 namespace LjusbolagetSyd.Core.Services
 {
 	public class ImageService : IImageService
 	{
+		private readonly IImageRepository _imageRepository;
+
+		public ImageService(IImageRepository imageRepository)
+		{
+			_imageRepository = imageRepository;
+		}
+
 		public IEnumerable<GalleryImageDto> GetImagesFromContentFolder(string path)
 		{
-			var images = new List<GalleryImageDto>();
-
-			if (!Directory.Exists(path)) return images;
-
-			var fileEntries = Directory.GetFiles(path);
-			images.AddRange(fileEntries.Select(fileEntry => new GalleryImageDto {ImageUrl = fileEntry}));
-
-			return images;
+			var images = _imageRepository.GetAll(path);
+			return images ?? Enumerable.Empty<GalleryImageDto>();
+			
 		}
 	}
 }

@@ -1,3 +1,5 @@
+using LjusbolagetSyd.Core.Repositories;
+using LjusbolagetSyd.Core.Repositories.Interfaces;
 using LjusbolagetSyd.Core.Services;
 using LjusbolagetSyd.Core.Services.Interfaces;
 
@@ -65,6 +67,7 @@ namespace LjusbolagetSyd.Web.App_Start
 		private static void RegisterServices(IKernel kernel)
 		{
 			kernel.Bind<IImageService>().To<ImageService>();
+			kernel.Bind<IImageRepository>().To<ImageRepository>();
 		}
 	}
 }
