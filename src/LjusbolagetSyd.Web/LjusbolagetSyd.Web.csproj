@@ -199,6 +199,7 @@
     <Content Include="Fonts\fontawesome-webfont.woff2" />
     <Content Include="Fonts\FontAwesome.otf" />
     <Content Include="App_Config\Ljusbolaget.config" />
+    <None Include="Properties\PublishProfiles\Ljusbolagetv2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

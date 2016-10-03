@@ -22,9 +22,8 @@
 	}
 
 .navbar {
-	/*background-color: rgb(9,3,35);*/
 	background: #090323;
-	background: rgba(9,3,35, 0.6);
+	background: rgba(1,0,50, 0.6);
 	text-transform: uppercase;
 }
 
@@ -56,6 +55,7 @@ footer {
 	width: 100%;
 	margin: 0;
 	padding-bottom: 10px;
+	border-top: 1px solid;
 }
 
 	footer p {
@@ -74,10 +74,6 @@ footer {
 	.footer-bottom span {
 		margin: 14px 0 20px 0;
 	}
-
-.featurette-divider {
-	margin: 80px 0;
-}
 
 .featurette {
 	overflow: hidden;
@@ -292,20 +288,42 @@ section {
 		}
 
 .carousel {
-	height: 60%;
+	max-width: 1170px;
+	margin: 0 auto;
+	height: 100%;
+	border-left: 1px solid;
+  border-right: 1px solid;
 }
+
+.carousel-outer-container {
+	max-width: 100%;
+	height: 655px;
+	background-color: rgb(9,3,35);
+	border-bottom: 1px solid;
+  margin-bottom: 20px;
+}
+
 address span {
 	padding-left: 5px;
 }
 
-#exTab1 .tab-content {
-  color : white;
-  /*background-color: #428bca;*/
-  padding : 5px 15px;
-}
+@media(max-width: 768px) {
+	.col-md-4.col-sm-6 {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 
-/* remove border radius for the tab */
+	.references-list > li {
+		display: list-item;
+	}
 
-#exTab1 .nav-pills > li > a {
-  border-radius: 0;
+	.contact-us-link {
+		width: 100%;
+	}
+
+	.featurette-heading {
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 40px;
+	}
 }
