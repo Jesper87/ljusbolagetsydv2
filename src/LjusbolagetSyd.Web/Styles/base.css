@@ -74,7 +74,9 @@ footer {
 	.footer-bottom span {
 		margin: 14px 0 20px 0;
 	}
-
+.footer-bottom .webadmin {
+	margin-left: 20px;
+}
 .featurette {
 	overflow: hidden;
 }
@@ -86,7 +88,11 @@ footer {
 .featurette-image.pull-right {
 	margin-left: 40px;
 }
+.featurette-image.img-logo {
+	margin: 0 auto;
+	max-width: 50%;
 
+}
 .featurette-heading {
 	font-size: 50px;
 }
@@ -283,7 +289,7 @@ section {
 		color: lightgreen:;
 	}
 
-		.references-list > li > i {
+		.references-list > li > i, .artists-listing li i {
 			color: lightgreen;
 		}
 
@@ -297,7 +303,7 @@ section {
 
 .carousel-outer-container {
 	max-width: 100%;
-	height: 655px;
+	height: 500px;
 	background-color: rgb(9,3,35);
 	border-bottom: 1px solid;
   margin-bottom: 20px;
@@ -326,4 +332,26 @@ address span {
 		margin-bottom: 20px;
 		font-size: 40px;
 	}
+}
+.tab-content {
+	margin-top: 10px;
+}
+.artists-listing {
+	list-style: none;
+}
+.artists-listing li {
+	padding: 5px;
+}
+.artists-listing li i {
+	padding-right: 5px;
+}
+#myTabs ul li a {
+	font-size: 20px;
+	color: lightgreen;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover  {
+	background-color: #000000;
+	border: none;
+	color: #fff;
+	font-weight: bold;
 }

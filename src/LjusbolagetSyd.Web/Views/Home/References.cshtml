@@ -17,55 +17,168 @@
 		</div>
 	</header>
 </div>
+<div class="container">
+	<div id="myTabs">
 
-	<div class="container">
-		<ul class="references-list">
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Trelleborgsgalan</span>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active" style="border-right: 1px solid white">
+				<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Event</a>
 			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Countryfestivalen 2016</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Trelleborg Pride 2016</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>ROCK IT Festival Ängelholm</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>BMX Worldcup Ängelholm</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Oktoberfest Tour 2016</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Ängelholm outdoor 2016</span>
-			</li>
-			<li>
-				<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Lommafesten 2016 med flera...</span>
+			<li role="presentation">
+				<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Artister</a>
 			</li>
 		</ul>
-		<hr class="primary">
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home">
+				<div class="container">
+					<ul class="references-list">
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Trelleborgsgalan</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Countryfestivalen 2016</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Trelleborg Pride 2016</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>ROCK IT Festival Ängelholm</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>BMX Worldcup Ängelholm</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Oktoberfest Tour 2016</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Ängelholm outdoor 2016</span>
+						</li>
+						<li>
+							<i class="fa fa-arrow-right" aria-hidden="true"></i><span>Lommafesten 2016 med flera...</span>
+						</li>
+					</ul>
+					<hr class="primary">
 
 
 
 
-		@if (Model != null)
-		{
-			for (int i = 0; i < Model.Count();)
-			{
-				<div class="row">
-					@foreach (var image in Model.Skip(i).Take(3))
+					@if (Model != null)
 					{
-						<div class="col-md-4 thumb limit">
-							<a class="border-thumbnail" href="@image.ImageUrl" data-lightbox="@image.ImageUrl">
-								<img class="img-responsive" src="@image.ImageUrl" alt="">
-							</a>
-						</div>
-						i++;
+						for (int i = 0; i < Model.Count();)
+						{
+							<div class="row">
+								@foreach (var image in Model.Skip(i).Take(3))
+								{
+									<div class="col-md-4 thumb limit">
+										<a class="border-thumbnail" href="@image.ImageUrl" data-lightbox="@image.ImageUrl">
+											<img class="img-responsive" src="@image.ImageUrl" alt="">
+										</a>
+									</div>
+									i++;
+								}
+							</div>
+							<hr class="primary">
+						}
 					}
 				</div>
-				<hr class="primary">
-			}
-		}
+			</div>
+
+			<div role="tabpanel" class="tab-pane" id="profile">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<ul class="artists-listing">
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Mustasch</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Hardcore Superstar</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Hoffmaestro</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>The Sounds</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Miriam Bryant</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Eric Saade</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Timoteij</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Von Benzo</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Jay Smith</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Bai Bang</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Lillebror</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Lousie Hoffsten</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Joddla Med Siv</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Swinging blue jeans</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Anton Ewald</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Sean Banan</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Perikles</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Arvingarna</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Pedalens pågar</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Anders Norman</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Simon Andersson</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Jannike stenlund</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Hasse Andersson</li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<ul class="artists-listing">
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Heat</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Familjen</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Sebastian Wijk</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Oscar Sia</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Young Squad</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Eddie razaz</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Sven Zetterberg</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Motherlovers</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Ursprunget</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Nilla Nielsen</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Prebens pågar</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>LOKE</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Jive</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>The refresments</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Calaisa</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>John Bull gang</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Jo & the lazy fellow</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Doug seegers</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Daniel Lemma</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Slackerville zoo</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Luftkapellet</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Cicci Landen</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Dennis Locorriere</li>
+							</ul>
+						</div>
+						<div class="col-md-4">
+							<ul class="artists-listing">
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Måns Zelmerlöv</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Sarah down Finer</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Loa Falkman</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Gunhild Carling</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Anna Hertzman</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Benny Hult</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Alcazar</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Glenn wish</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Tone norum</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Rydell quick</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Creedance Tribute</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Hep Stars</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Robert Wells</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Bonafide</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Linus Svenning</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Yohio</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Panetoz</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Danne Stråhed</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>The Boppers</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Dan Hylander</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Lasse Stefans</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>The Playtones</li>
+								<li><i class="fa fa-arrow-right" aria-hidden="true"></i>Torsson</li>
+							</ul>
+						</div>
+						</div>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
+<script>
+	$('#myTabs a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	})
+</script>

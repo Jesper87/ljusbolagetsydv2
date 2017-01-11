@@ -105,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Artists.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Images\Gallery\bild11.jpg" />
     <Content Include="Content\Images\Gallery\bild12.jpg" />
     <Content Include="Content\Images\Gallery\bild13.jpg" />
@@ -153,6 +156,12 @@
     <Content Include="Content\Logo\logo.jpg" />
     <Content Include="Content\Logo\logo2.jpg" />
     <Content Include="Content\Logo\magicfx.svg" />
+    <Content Include="Content\Logo\photo.jpg" />
+    <Content Include="Content\Logo\sanyo-logo.jpg" />
+    <Content Include="Content\Logo\Shure-Logo-without-Tagline_Black.png" />
+    <Content Include="Content\Logo\slsgrouplogo.jpg" />
+    <Content Include="Content\Logo\Sommer-cable-logo.png" />
+    <Content Include="Content\Logo\srs.jpg" />
     <Content Include="Content\Movies\2016_09_24_17_20_33.mp4" />
     <Content Include="Content\Movies\MOV_0478.mp4" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
@@ -208,7 +217,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
